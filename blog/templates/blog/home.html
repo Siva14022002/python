@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+</head>
+<body>
+    <h1>Welcome to My Blog!</h1>
+    <p>This is my first Django website.</p>
+    <p>Hello, {{ userName }}!</p>
+     {% if post_count > 2 %}
+        <p>You are an active blogger!</p>
+    {% else %}
+        <p>Write more posts!</p>
+    {% endif %}
+    <p>You have {{ post_count }} posts.</p>
+    <ul>
+        {% for post in posts %}
+            <li>{{ post }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
